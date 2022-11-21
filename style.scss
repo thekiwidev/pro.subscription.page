@@ -1,0 +1,158 @@
+@import "./scss/variables";
+@import "./scss/types";
+@import "./scss/mixins";
+@import "./scss/utils";
+
+.container {
+  max-width: 1250px;
+  margin: auto;
+  padding: 1rem;
+}
+
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $theme-black;
+  color: $theme-white;
+  .blob {
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: -10;
+
+    svg {
+      position: absolute;
+      left: -30%;
+      bottom: -30%;
+
+      path {
+        animation: pump 4s linear infinite alternate;
+      }
+    }
+  }
+
+  h1.header {
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .vendor-subscription-plans-container {
+    margin-top: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    @media only screen and (min-width: 850px) {
+      flex-direction: row;
+    }
+
+    .vendor-plan {
+      width: 100%;
+      max-width: 600px;
+
+      border: 1px solid $theme-white;
+      background: $theme-white;
+      color: $theme-black;
+
+      padding: 2rem 1.5rem;
+
+      border-radius: 1.2rem;
+
+      // cursor: pointer;
+      transition: 0.5s;
+
+      box-shadow: 2px 3px 8px #49494950;
+
+      .plan-title {
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .plan-pricing-info {
+        margin-top: 2rem;
+        flex: 1;
+        text-align: center;
+
+        h1 {
+          margin-bottom: 0.5rem;
+        }
+
+        sup {
+          font-size: 1.5rem;
+          color: $theme-orange;
+        }
+
+        p {
+          margin-bottom: 1rem;
+        }
+      }
+      .btn {
+        width: 70%;
+        text-align: center;
+        margin-inline: 15%;
+      }
+      .plan-features {
+        width: 80%;
+        margin: auto;
+        margin-top: 2rem;
+
+        overflow: hidden;
+        transition: 0.3s;
+
+        @media only screen and (min-width: 850px) {
+          height: 100%;
+        }
+        .feature {
+          p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          }
+
+          margin-bottom: 0.5rem;
+
+          span {
+            display: flex;
+            align-items: center;
+          }
+          img {
+            width: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes pump {
+  0% {
+    transform: scale(0.73);
+  }
+  // 20% {
+  //   transform: rotate(40deg);
+  // }
+  // 40% {
+  //   transform: rotate(60deg);
+  // }
+  // 60% {
+  //   transform: rotate(80deg);
+  // }
+  // 80% {
+  //   transform: rotate(90deg);
+  // }
+  100% {
+    transform: scale(0.76);
+  }
+}

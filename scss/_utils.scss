@@ -1,0 +1,91 @@
+@import "./variables";
+
+.btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background: #ececec;
+
+  outline: none;
+  border: 0.1rem solid #fefefe00;
+
+  border-radius: 1rem;
+
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $theme-black;
+    color: #fff;
+    border-color: #fff;
+  }
+
+  &.btn-outline {
+    border-color: $theme-black;
+  }
+
+  &.btn-green {
+    background: $theme-green;
+
+    &:hover {
+      background: none;
+      color: #fff;
+    }
+  }
+
+  &.btn-green-outline {
+    border-color: $theme-green;
+    background: none;
+    color: $theme-black;
+
+    &:hover {
+      background: $theme-green;
+      color: #000;
+    }
+  }
+
+  &.btn-orange {
+    background: $theme-orange;
+
+    &:hover {
+      border-color: $theme-orange;
+      background: none;
+      color: $theme-orange;
+    }
+  }
+
+  &.btn-orange-outline {
+    border-color: $theme-orange;
+    background: none;
+    color: $theme-black;
+
+    &:hover {
+      background: $theme-orange;
+    }
+  }
+
+  &.btn-black {
+    background: #090909;
+
+    &:hover {
+      background: #017a76;
+      color: #fff;
+    }
+  }
+
+  &.btn-black-outline {
+    border-color: #090909;
+
+    &:hover {
+      background: #017a76;
+      color: #fff;
+    }
+  }
+}

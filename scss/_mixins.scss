@@ -1,0 +1,19 @@
+@import "./variables";
+
+@mixin plan {
+  width: 100%;
+  max-width: 300px;
+
+  border: 1px solid $theme-white;
+  background: $theme-white;
+  color: $theme-black;
+  opacity: 0.8;
+
+  padding: 2rem 1.5rem;
+
+  border-radius: 2rem;
+
+  .plan-title {
+    text-transform: capitalize;
+  }
+}
